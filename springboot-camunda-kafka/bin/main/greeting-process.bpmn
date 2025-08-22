@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:camunda="http://camunda.org/schema/1.0/bpmn"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             targetNamespace="http://camunda.org/examples">
+
+  <process id="greetingProcess" name="Greeting Process" isExecutable="true">
+    <startEvent id="StartEvent" name="Start" />
+    <serviceTask id="ServiceTask_Greeting"
+                 name="Determine Greeting"
+                 camunda:class="com.example.camundagreeting.delegate.GreetingDelegate" />
+    <endEvent id="EndEvent" name="End" />
+    <sequenceFlow id="flow1" sourceRef="StartEvent" targetRef="ServiceTask_Greeting" />
+    <sequenceFlow id="flow2" sourceRef="ServiceTask_Greeting" targetRef="EndEvent" />
+  </process>
+</definitions>

@@ -1,0 +1,26 @@
+{
+  "components": [
+    {
+      "label": "UWPass",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1ux69f1",
+        "columns": null
+      },
+      "id": "Field_05ov0ma",
+      "key": "uwPassed",
+      "defaultValue": "No",
+      "properties": {}
+    }
+  ],
+  "type": "default",
+  "id": "UWForm",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.37.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.23.0",
+  "versionTag": "0.1",
+  "schemaVersion": 18
+}
