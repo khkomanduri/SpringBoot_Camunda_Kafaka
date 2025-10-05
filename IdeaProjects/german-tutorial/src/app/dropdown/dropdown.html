@@ -1,0 +1,16 @@
+
+<div class="dropdown">
+ <table><td>
+  <button class="dropbtn">Choose the topic</button></td>
+ <td> <div class="dropdown-content">
+<select class="selectbox" #cricket (change)="update($event)">
+  <option value="default">----</option>
+  <option *ngFor="let player of players" [value]="player">
+    {{player}}
+  </option>
+</select>
+</div>
+ </td>
+ </table>
+</div>
+<p>You selected {{selected}}</p>
